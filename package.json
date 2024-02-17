@@ -1,0 +1,35 @@
+{
+  "name": "css-connect-backend",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "format": "prettier --write .",
+    "precommit": "simple-git-hooks",
+    "build": "esbuild server.js --bundle --platform=node --target=node18 --outfile=build/main.js --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
+    "esbuild": "^0.20.0",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm run format"
+  }
+}
